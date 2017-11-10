@@ -36,11 +36,4 @@ public class SearchTest {
 		int x = 8;
 		assertEquals(testclass.find(x, a),-1);
 	}
-
-	@Test
-	public void testBinarySearch() {
-		
-		
-	}
-
 }
