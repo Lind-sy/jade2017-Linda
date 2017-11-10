@@ -26,7 +26,8 @@ public class FibonachiSeries {
 		}
 
 		for (int i = 2; i < N; i++) {
-			FibonacciSeries[i] = FibonacciSeries[i - 1] + FibonacciSeries[i - 2];
+			FibonacciSeries[i] = FibonacciSeries[i - 1]
+					+ FibonacciSeries[i - 2];
 		}
 
 		return FibonacciSeries;
