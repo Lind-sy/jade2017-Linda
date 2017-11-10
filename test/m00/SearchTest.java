@@ -29,6 +29,13 @@ public class SearchTest {
 		int x = 7;
 		assertEquals(testclass.find(x, a),4);
 	}
+	
+	@Test
+	public void testFindCase4() {
+		int[] a = new int[]{1,2,3,4};
+		int x = 8;
+		assertEquals(testclass.find(x, a),-1);
+	}
 
 	@Test
 	public void testBinarySearch() {
