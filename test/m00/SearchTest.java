@@ -43,4 +43,11 @@ public class SearchTest {
 		int x = 2;
 		assertEquals(testclass.find(x, a),1);
 	}
+	
+	@Test
+	public void testFindCase6() {
+		int[] a = new int[]{1};
+		int x = 1;
+		assertEquals(testclass.find(x, a),0);
+	}
 }
