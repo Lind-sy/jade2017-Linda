@@ -1,22 +1,35 @@
 package lv.vea.fibonacci;
+
 import java.util.Arrays;
 
 public class FibonachiSeries {
-		
-	public static void main(String[] args){
+
+	private static int FibonacciSeries[];
+
+	public static void main(String[] args) {
 		int[] myFib = getFibonacciSeries(6);
 		System.out.println(Arrays.toString(myFib));
 	}
-	
-	public static int[] getFibonacciSeries(int N){
-		int[] fibonacci = new int[N];
-		fibonacci[0] = 1;
-		fibonacci[1] = 1;
-		for(int i=2;i<N; i++){
-			fibonacci[i] = fibonacci[i-1]+fibonacci[i-2]; 
+
+	public static int[] getFibonacciSeries(int N) {
+
+		if (FibonacciSeries == null) {
+			FibonacciSeries = new int[N];
 		}
-		
-		return fibonacci;  
-	}	
-	
+		if (N == 1) {
+			FibonacciSeries[0] = 0;
+		} else if (N >= 2) {
+			FibonacciSeries[0] = 0;
+			FibonacciSeries[1] = 1;
+		} else {
+			String msg = "Input is not correct!"; 
+			throw new RuntimeException(msg);
+		}
+
+		for (int i = 2; i < N; i++) {
+			FibonacciSeries[i] = FibonacciSeries[i - 1] + FibonacciSeries[i - 2];
+		}
+
+		return FibonacciSeries;
+	}
 }
