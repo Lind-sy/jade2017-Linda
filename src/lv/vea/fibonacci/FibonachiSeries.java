@@ -22,8 +22,7 @@ public class FibonachiSeries {
 			FibonacciSeries[0] = 0;
 			FibonacciSeries[1] = 1;
 		} else {
-			String msg = "Input is not correct!"; 
-			throw new RuntimeException(msg);
+			throw new RuntimeException("Input is not correct!");
 		}
 
 		for (int i = 2; i < N; i++) {
